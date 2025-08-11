@@ -8,20 +8,20 @@ model:
   vit_precision: "fp16"
   freeze_vit: True
   freeze_qformer: True
-  vit_model_path: weights/eva_vit_g.pth
+  vit_model_path: /kaggle/input/infodet/pytorch/default/1/InfoDET/eva_vit_g.pth
 
   # Q-Former
   num_query_token: 32
-  q_former_model: weights/blip2_pretrained_flant5xxl.pth
+  q_former_model: /kaggle/input/infodet/pytorch/default/1/InfoDET/blip2_pretrained_flant5xxl.pth
 
   # Vicuna
-  llama_model: weights/vicuna-13b-v0-merged/
+  llama_model: /kaggle/input/vicuna_merged/pytorch/default/1/Vicuna_merged/data/
 
   # generation configs
   prompt: ""
 
   # tokenizer
-  tokenizer: weights/bert/bert-base-uncased/
+  tokenizer: /kaggle/input/infodet/pytorch/default/1/InfoDET/model.safetensors
 
 preprocess:
     vis_processor:
