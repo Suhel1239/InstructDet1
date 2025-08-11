@@ -16,7 +16,7 @@ use_conjunction: True # whether combine expressions by conjunction: "and" or ","
 use_group: True # whether leveling generated expressions
 
 llava_config:
-    model_path: /kaggle/input/llava/pytorch/default/2/
+    model_path: /kaggle/input/llava/pytorch/default/3/
     model_base: ~
     batch_size: 1
     conv_mode: ~
