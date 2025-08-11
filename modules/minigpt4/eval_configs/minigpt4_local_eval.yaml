@@ -8,7 +8,7 @@ model:
   low_resource: False
   prompt_path: "prompts/refcoco_alignment.txt"
   prompt_template: '###Human: {} ###Assistant: '
-  ckpt: weights/minigpt4_linear_layer/checkpoint_30.pth
+  ckpt: /kaggle/input/infodet/pytorch/default/1/InfoDET/MiniGPT4_checkpoint_30.pth
   train_generate: True
 
 datasets:
