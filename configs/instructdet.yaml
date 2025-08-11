@@ -1,8 +1,8 @@
 meta_file: 
-    - data/labels/refcoco/refcoco-unc/llavainput_testA.json
+    - /kaggle/input/tcm-iitd-2500/train/_annotations.coco.json
 image_prefix: 
-    - data/images/coco/train2014
-outpath: outputs/refcoco/refcoco-unc/
+    - /kaggle/input/tcm-iitd-2500/train
+outpath: kaggle/working
 
 read_from: 'fs'
 petrel_conf:
@@ -16,7 +16,7 @@ use_conjunction: True # whether combine expressions by conjunction: "and" or ","
 use_group: True # whether leveling generated expressions
 
 llava_config:
-    model_path: weights/llava/llava_v1.5_13b/
+    model_path: /kaggle/input/llava/pytorch/default/1/llava/data/
     model_base: ~
     batch_size: 1
     conv_mode: ~
@@ -24,7 +24,7 @@ llava_config:
     repeat: 1    # int, support infer repeat times and concat output captions
     dump: False
 llama_config:
-    model_path: weights/llama/vicuna-13b-v1.3/
+    model_path: /kaggle/input/vicuna/pytorch/default/1/vicuna/data/
     gpus: "0"
     revision: "main"
     device: "cuda"
@@ -64,14 +64,14 @@ local_ppl_config:
 filter_config:
     type: "CLIP"
     CLIP:
-        model_path: weights/clip/ViT-B-32.pt # "ViT-B/32"
+        model_path: /kaggle/input/infodet/pytorch/default/1/InfoDET/ViT-B-32.pt # "ViT-B/32"
         alpha: 2  # [1,2]
         tlr: 1.5   # tolerance for generated expressions
 multi_object:
     cluster:
         type: "DBSCAN"
         DBSCAN:
-            model_path: weights/bert/bert-base-uncased/
+            model_path: /kaggle/input/infodet/pytorch/default/1/InfoDET/model.safetensors
             eps: 5  # DBSCAN parameter, this could vary a lot for different data, normally ~ [1.5, 8]
     conjunction:
         num_scale: [2, 3]  # number of instances combined by adding conjunction to expressions
