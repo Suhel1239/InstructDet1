@@ -16,7 +16,7 @@ use_conjunction: True # whether combine expressions by conjunction: "and" or ","
 use_group: True # whether leveling generated expressions
 
 llava_config:
-    model_path: /kaggle/input/llava/pytorch/default/1/llava/data/
+    model_path: /kaggle/input/llava/pytorch/default/2/
     model_base: ~
     batch_size: 1
     conv_mode: ~
@@ -24,7 +24,7 @@ llava_config:
     repeat: 1    # int, support infer repeat times and concat output captions
     dump: False
 llama_config:
-    model_path: /kaggle/input/vicuna/pytorch/default/1/vicuna/data/
+    model_path: /kaggle/input/vicuna/pytorch/default/1/vicuna/
     gpus: "0"
     revision: "main"
     device: "cuda"
