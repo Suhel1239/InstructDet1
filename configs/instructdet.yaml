@@ -1,7 +1,7 @@
 meta_file: 
-    - /kaggle/input/tcm-iitd-2500/train/_annotations.coco.json
+    - /kaggle/working/your_refcoco_format.json
 image_prefix: 
-    - /kaggle/input/tcm-iitd-2500/train
+    - /kaggle/input/tcm-iitd-2500/test
 outpath: kaggle/working
 
 read_from: 'fs'
